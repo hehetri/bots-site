@@ -1,47 +1,23 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const time = document.querySelector("#server-time");
-  const language = document.querySelector(".language");
-  const menu = document.querySelector("#language-menu");
+  const stage = document.querySelector(".design-stage");
+  const language = document.querySelector(".header-hotspot .language");
 
-  function updateTime() {
-    if (!time) return;
-    const now = new Date();
-    const formatted = new Intl.DateTimeFormat("en-GB", {
-      day: "2-digit", month: "short", year: "numeric",
-      hour: "2-digit", minute: "2-digit", hour12: false,
-      timeZoneName: "short"
-    }).format(now).replace("GMT", "UTC");
-    time.textContent = formatted;
-  }
-
-  updateTime();
-  setInterval(updateTime, 30000);
-
-  document.querySelectorAll(".nav-item").forEach(link => {
-    link.addEventListener("click", () => {
-      document.querySelectorAll(".nav-item").forEach(item => item.classList.remove("active"));
-      link.classList.add("active");
+  document.querySelectorAll(".hotspot-link").forEach(link => {
+    link.addEventListener("click", event => {
+      const href = link.getAttribute("href");
+      if (!href || !href.startsWith("#")) return;
+      const target = document.querySelector(href);
+      if (!target || target === stage) return;
+      event.preventDefault();
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
     });
   });
 
   language?.addEventListener("click", () => {
-    const open = language.getAttribute("aria-expanded") === "true";
-    language.setAttribute("aria-expanded", String(!open));
-    menu.hidden = open;
-  });
-
-  menu?.querySelectorAll("button").forEach(button => {
-    button.addEventListener("click", () => {
-      language.querySelector("span:nth-child(2)").textContent =
-        button.textContent.trim().slice(0, 2).toUpperCase();
-      language.setAttribute("aria-expanded", "false");
-      menu.hidden = true;
-    });
-  });
-
-  document.addEventListener("click", event => {
-    if (!menu || menu.hidden || menu.contains(event.target) || language.contains(event.target)) return;
-    menu.hidden = true;
-    language.setAttribute("aria-expanded", "false");
+    const languages = ["EN", "PT", "ES", "ZH", "JA", "KO", "ID"];
+    const current = language.dataset.lang || "EN";
+    const next = languages[(languages.indexOf(current) + 1) % languages.length];
+    language.dataset.lang = next;
+    language.setAttribute("aria-label", `Language: ${next}. Language selector will be connected in the next phase.`);
   });
 });
