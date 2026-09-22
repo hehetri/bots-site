@@ -1,1 +1,70 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#06131f"><meta name="description" content="BOTS Online — Small bots, big adventure."><title>BOTS Online</title><link rel="stylesheet" href="./css/style.css"></head><body><main class="mockup-site"><div class="design-stage"><img class="design-image" src="./ChatGPT%20Image%20Sep%2022,%202026%20at%2006_10_56%20PM.png" alt="BOTS Online website design"><header class="hotspot header-hotspot"><a href="./index.html" class="hotspot-link home" aria-label="Home"></a><a href="./pages/game-info.html" class="hotspot-link game-info" aria-label="Game Info"></a><a href="./pages/download.html" class="hotspot-link download" aria-label="Download"></a><a href="./pages/ranking.html" class="hotspot-link ranking" aria-label="Ranking"></a><a href="./pages/community.html" class="hotspot-link community" aria-label="Community"></a><a href="./pages/support.html" class="hotspot-link support" aria-label="Support"></a><button class="hotspot-link language" type="button" aria-label="Language"></button></header><a href="./pages/download.html" class="hotspot-link play-now" aria-label="Play Now"></a><section id="home" class="hotspot hero-area"></section><section class="hotspot news-area"><a href="./pages/community.html" class="hotspot-link view-news" aria-label="View all news"></a></section><section class="hotspot game-info-area"><a href="./pages/guide.html" class="hotspot-link game-guide" aria-label="Game Guide"></a><a href="./pages/characters.html" class="hotspot-link characters" aria-label="Characters"></a><a href="./pages/maps.html" class="hotspot-link maps" aria-label="Maps"></a><a href="./pages/items.html" class="hotspot-link items" aria-label="Items"></a></section><aside class="hotspot side-area"><a href="./pages/download.html" class="hotspot-link download-client" aria-label="Download Game Client"></a><a href="./pages/guide.html" class="hotspot-link side-guide" aria-label="Game Guide"></a><a href="./pages/ranking.html" class="hotspot-link side-ranking" aria-label="Ranking"></a><a href="./pages/community.html" class="hotspot-link side-community" aria-label="Community"></a><a href="./pages/support.html" class="hotspot-link side-support" aria-label="Support"></a></aside><footer class="hotspot footer-area"><a href="./index.html" class="hotspot-link footer-home"></a><a href="./pages/game-info.html" class="hotspot-link footer-game-info"></a><a href="./pages/download.html" class="hotspot-link footer-download"></a><a href="./pages/ranking.html" class="hotspot-link footer-ranking"></a><a href="./pages/community.html" class="hotspot-link footer-community"></a><a href="./pages/support.html" class="hotspot-link footer-support"></a></footer></div></main><script src="./js/main.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="BOTS Online — Small Bots, Big Adventure.">
+<title>BOTS Online</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<div class="site">
+<header class="topbar">
+  <a class="brand" href="#home" data-page="home"><span class="brand-main">BOTS</span><span class="brand-sub">ONLINE</span></a>
+  <nav class="main-nav" aria-label="Main navigation">
+    <a href="#home" data-page="home" class="active">HOME</a><a href="#game-info" data-page="game-info">GAME INFO</a>
+    <a href="#download" data-page="download">DOWNLOAD</a><a href="#ranking" data-page="ranking">RANKING</a>
+    <a href="#community" data-page="community">COMMUNITY</a><a href="#support" data-page="support">SUPPORT</a>
+  </nav>
+  <button class="lang-btn" type="button" id="lang-btn">◎ <span>EN</span>⌄</button>
+  <div class="lang-menu" id="lang-menu" hidden>
+    <button>English</button><button>Português</button><button>Español</button><button>中文</button><button>日本語</button><button>한국어</button><button>Bahasa Indonesia</button>
+  </div>
+</header>
+
+<main>
+<section class="page active-page" id="page-home" data-page-view="home">
+  <section class="hero">
+    <div class="hero-art" aria-hidden="true"></div>
+    <div class="hero-left"><div class="scribble">SMALL BOTS<br>BIG ADVENTURE</div><h1>BOTS <em>ONLINE</em></h1><p>GEAR UP<br>TEAM UP<br>JUMP IN!</p></div>
+    <a class="orange-btn play" href="#download" data-page="download"><strong>PLAY NOW</strong><small>DOWNLOAD GAME CLIENT</small><b>›</b></a>
+    <div class="hero-right">ACTION<br>FRIENDSHIP<br>ENDLESS FUN</div>
+    <div class="status"><div class="status-head"><b>SERVER STATUS</b><strong><i></i> ONLINE</strong></div>
+      <div><span>● Login Server</span><b>Online</b></div><div><span>● Game Server</span><b>Online</b></div>
+      <div><span>● Players Online</span><b>1,248</b></div><div><span>● Server Time</span><b id="server-time">--</b></div>
+    </div>
+  </section>
+
+  <section class="home-grid">
+    <article class="panel news"><div class="panel-title"><h2>▣ NEWS &amp; UPDATES</h2><a href="#community" data-page="community">VIEW ALL ›</a></div>
+      <div class="news-item"><div class="news-img n1"></div><div><span class="badge blue">UPDATE</span><small>SEP 20, 2026</small><h3>Client Update Released</h3><p>New content, improvements and bug fixes.<br>Download the latest version and join the battle!</p></div></div>
+      <div class="news-item"><div class="news-img n2"></div><div><span class="badge orange">EVENT</span><small>SEP 18, 2026</small><h3>Weekend Boost Event</h3><p>Enjoy increased EXP and item drop rates this weekend!</p></div></div>
+      <div class="news-item"><div class="news-img n3"></div><div><span class="badge gray">NOTICE</span><small>SEP 15, 2026</small><h3>Scheduled Maintenance</h3><p>Regular maintenance and server improvements.</p></div></div>
+    </article>
+    <article class="panel info"><div class="panel-title"><h2>▤ GAME INFO</h2></div>
+      <a class="info-feature" href="#game-info" data-page="game-info"><span>EXPLORE<br>BATTLE<br>COLLECT<br>GROW</span><b>GAME GUIDE ›</b></a>
+      <div class="three"><a href="#game-info" data-page="game-info" class="tile t1"><b>CHARACTERS</b></a><a href="#game-info" data-page="game-info" class="tile t2"><b>MAPS</b></a><a href="#game-info" data-page="game-info" class="tile t3"><b>ITEMS</b></a></div>
+    </article>
+    <aside class="side">
+      <a class="orange-btn download" href="#download" data-page="download"><span>⇩</span><strong>DOWNLOAD</strong><small>GAME CLIENT</small><b>›</b></a>
+      <a class="side-link" href="#game-info" data-page="game-info"><span>▣</span><div><b>GAME GUIDE</b><small>Learn the basics and master BOTS</small></div>›</a>
+      <a class="side-link" href="#ranking" data-page="ranking"><span>♛</span><div><b>RANKING</b><small>Check the top players</small></div>›</a>
+      <a class="side-link" href="#community" data-page="community"><span>●</span><div><b>COMMUNITY</b><small>News, discussions and more</small></div>›</a>
+      <a class="side-link" href="#support" data-page="support"><span>?</span><div><b>SUPPORT</b><small>Get help and contact us</small></div>›</a>
+    </aside>
+  </section>
+</section>
+
+<section class="page" id="page-game-info" data-page-view="game-info"><div class="inner-hero"><h1>GAME <em>INFO</em></h1><p>Explore characters, maps, items and the BOTS game systems.</p></div><div class="inner-grid"><article class="panel large"><h2>EXPLORE BOTS ONLINE</h2><p>BOTS is a fast arcade-style robot action game built around characters, equipment, maps, missions and competitive play.</p><div class="cards"><a class="card" href="#game-info"><h3>CHARACTERS</h3><p>Discover the BOTS roster and combat styles.</p></a><a class="card" href="#game-info"><h3>MAPS</h3><p>Explore arenas, dungeons and special events.</p></a><a class="card" href="#game-info"><h3>ITEMS</h3><p>Equipment, upgrades and cosmetics.</p></a><a class="card" href="#game-info"><h3>GAME GUIDE</h3><p>Learn missions, progression and gameplay.</p></a></div></article><aside class="panel side-card"><h2>GAME SYSTEM</h2><p>Characters → Equipment → Missions → Rewards → Ranking</p></aside></div></section>
+
+<section class="page" id="page-download" data-page-view="download"><div class="inner-hero"><h1>DOWNLOAD <em>CLIENT</em></h1><p>Install the BOTS Online client and keep it updated with the launcher.</p></div><div class="inner-grid"><article class="panel large"><h2>BOTS ONLINE CLIENT</h2><div class="client-box"><div><small>CURRENT CLIENT</small><h3>BOTS Online</h3><p>Windows PC · Full game client</p></div><a class="orange-btn real-btn" href="#" onclick="return false">DOWNLOAD CLIENT ›</a></div><div class="cards"><div class="card"><h3>LAUNCHER</h3><p>Automatic updates and file verification.</p></div><div class="card"><h3>UPDATES</h3><p>Keep your installation synchronized.</p></div><div class="card"><h3>SUPPORT</h3><p>Help with installation and technical issues.</p></div></div></article><aside class="panel side-card"><h2>SERVER</h2><p class="green">● ONLINE</p><p>Login Server<br>Game Server</p></aside></div></section>
+
+<section class="page" id="page-ranking" data-page-view="ranking"><div class="inner-hero"><h1>PLAYER <em>RANKING</em></h1><p>Level, experience and guild rankings.</p></div><div class="inner-grid"><article class="panel large"><div class="tabs"><button class="active">LEVEL</button><button>EXPERIENCE</button><button>GUILD</button></div><div class="table-wrap"><table><thead><tr><th>#</th><th>PLAYER</th><th>LEVEL</th><th>EXPERIENCE</th><th>GUILD</th></tr></thead><tbody><tr><td>1</td><td>ExampleBot</td><td>120</td><td>98,421,500</td><td>—</td></tr><tr><td>2</td><td>BattleCore</td><td>119</td><td>96,110,230</td><td>RAVEN</td></tr><tr><td>3</td><td>SteelFox</td><td>118</td><td>94,702,810</td><td>PHOENIX</td></tr><tr><td>4</td><td>RedUnit</td><td>117</td><td>91,225,410</td><td>RAVEN</td></tr><tr><td>5</td><td>BlueGear</td><td>116</td><td>89,500,004</td><td>PHOENIX</td></tr></tbody></table></div><p class="note">Demo data until the live <code>bout_evolution</code> database is connected. GM/admin accounts will be excluded.</p></article></div></section>
+
+<section class="page" id="page-community" data-page-view="community"><div class="inner-hero"><h1>BOT <em>COMMUNITY</em></h1><p>News, events and discussions around BOTS Online.</p></div><div class="inner-grid"><article class="panel large"><h2>NEWS &amp; UPDATES</h2><div class="news-cards"><article><span>UPDATE · SEP 20, 2026</span><h3>Client Update Released</h3><p>New content, improvements and bug fixes.</p></article><article><span>EVENT · SEP 18, 2026</span><h3>Weekend Boost Event</h3><p>Increased EXP and item drop rates.</p></article><article><span>NOTICE · SEP 15, 2026</span><h3>Scheduled Maintenance</h3><p>Server maintenance and infrastructure updates.</p></article></div></article><aside class="panel side-card"><h2>COMMUNITY</h2><a class="orange-btn real-btn" href="#" onclick="return false">DISCORD ›</a></aside></div></section>
+
+<section class="page" id="page-support" data-page-view="support"><div class="inner-hero"><h1>PLAYER <em>SUPPORT</em></h1><p>Get help with accounts, installation, gameplay and technical issues.</p></div><div class="inner-grid"><article class="panel large"><h2>HOW CAN WE HELP?</h2><form id="support-form"><label>Name<input required></label><label>Email<input type="email" required></label><label>Category<select><option>Technical issue</option><option>Account</option><option>Game client</option><option>Bug report</option></select></label><label>Message<textarea required rows="6"></textarea></label><button class="orange-btn real-btn" type="submit">SEND REQUEST ›</button><p id="form-msg" class="green"></p></form></article></div></section>
+</main>
+<footer><div class="footer-logo">BOTS<span>ONLINE</span></div><span>SMALL BOTS, BIG ADVENTURE</span><nav><a href="#home" data-page="home">HOME</a><a href="#game-info" data-page="game-info">GAME INFO</a><a href="#download" data-page="download">DOWNLOAD</a><a href="#ranking" data-page="ranking">RANKING</a><a href="#community" data-page="community">COMMUNITY</a><a href="#support" data-page="support">SUPPORT</a></nav><span>A MORE COLORFUL WORLD AWAITS</span></footer>
+</div><script src="./js/main.js"></script></body></html>
