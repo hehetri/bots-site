@@ -3,157 +3,61 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#071522">
+  <meta name="theme-color" content="#06131f">
   <meta name="description" content="BOTS Online — Small bots, big adventure.">
   <title>BOTS Online</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-  <div class="site-shell">
-    <header class="topbar">
-      <a class="brand" href="#home" aria-label="BOTS Online home">
-        <span class="brand-bots">BOTS</span>
-        <span class="brand-online">ONLINE</span>
-      </a>
+  <main class="mockup-site" aria-label="BOTS Online website">
+    <div class="design-stage">
+      <img class="design-image"
+        src="./ChatGPT%20Image%20Sep%2022,%202026%20at%2006_10_56%20PM.png"
+        alt="BOTS Online website design">
 
-      <nav class="main-nav" aria-label="Main navigation">
-        <a class="nav-item active" href="#home">HOME</a>
-        <a class="nav-item" href="#game-info">GAME INFO</a>
-        <a class="nav-item" href="#download">DOWNLOAD</a>
-        <a class="nav-item" href="#ranking">RANKING</a>
-        <a class="nav-item" href="#community">COMMUNITY</a>
-        <a class="nav-item" href="#support">SUPPORT</a>
-      </nav>
+      <header class="hotspot header-hotspot">
+        <a href="#home" class="hotspot-link home" aria-label="Home"></a>
+        <a href="#game-info" class="hotspot-link game-info" aria-label="Game Info"></a>
+        <a href="#download" class="hotspot-link download" aria-label="Download"></a>
+        <a href="#ranking" class="hotspot-link ranking" aria-label="Ranking"></a>
+        <a href="#community" class="hotspot-link community" aria-label="Community"></a>
+        <a href="#support" class="hotspot-link support" aria-label="Support"></a>
+        <button class="hotspot-link language" type="button" aria-label="Select language"></button>
+      </header>
 
-      <button class="language" type="button" aria-expanded="false" aria-controls="language-menu">
-        <span class="globe">◎</span><span>EN</span><b>⌄</b>
-      </button>
-      <div class="language-menu" id="language-menu" hidden>
-        <button type="button">English</button>
-        <button type="button">Português</button>
-        <button type="button">Español</button>
-        <button type="button">한국어</button>
-        <button type="button">日本語</button>
-        <button type="button">中文</button>
-        <button type="button">Bahasa Indonesia</button>
-      </div>
-    </header>
+      <a href="#download" class="hotspot-link play-now" aria-label="Play Now — Download Game Client"></a>
 
-    <main id="home">
-      <section class="hero" aria-label="BOTS Online">
-        <div class="hero-copy">
-          <div class="eyebrow">SMALL BOTS<br>BIG ADVENTURE</div>
-          <h1>BOTS <em>ONLINE</em></h1>
-          <p>GEAR UP<br>TEAM UP<br>JUMP IN!</p>
-        </div>
+      <section id="home" class="hotspot hero-area" aria-label="BOTS Online home"></section>
 
-        <a class="hero-play" href="#download">
-          <strong>PLAY NOW</strong>
-          <span>DOWNLOAD GAME CLIENT</span>
-          <b>›</b>
-        </a>
-
-        <div class="hero-tagline">ACTION<br>FRIENDSHIP<br>ENDLESS FUN</div>
-
-        <div class="server-card" aria-label="Server status">
-          <div class="server-title">
-            <span>SERVER STATUS</span>
-            <strong><i></i> ONLINE</strong>
-          </div>
-          <div class="server-row"><span>● &nbsp;Login Server</span><b>Online</b></div>
-          <div class="server-row"><span>● &nbsp;Game Server</span><b>Online</b></div>
-          <div class="server-row"><span>● &nbsp;Players Online</span><b id="players">1,248</b></div>
-          <div class="server-row"><span>● &nbsp;Server Time</span><b id="server-time">--</b></div>
-        </div>
+      <section id="news" class="hotspot news-area" aria-label="News and Updates">
+        <a href="#news" class="hotspot-link view-news" aria-label="View all news"></a>
       </section>
 
-      <section class="content-grid">
-        <article class="panel news-panel" id="news">
-          <div class="panel-heading">
-            <h2><span>▣</span> NEWS &amp; UPDATES</h2>
-            <a href="#news">VIEW ALL ›</a>
-          </div>
-          <div class="news-list">
-            <a class="news-item" href="#news">
-              <div class="thumb thumb-1"></div>
-              <div class="news-copy">
-                <div><span class="badge update">UPDATE</span><small>SEP 20, 2026</small></div>
-                <h3>Client Update Released</h3>
-                <p>New content, improvements and bug fixes.<br>Download the latest version and join the battle!</p>
-              </div>
-            </a>
-            <a class="news-item" href="#news">
-              <div class="thumb thumb-2"></div>
-              <div class="news-copy">
-                <div><span class="badge event">EVENT</span><small>SEP 18, 2026</small></div>
-                <h3>Weekend Boost Event</h3>
-                <p>Enjoy increased EXP and item drop rates<br>this weekend!</p>
-              </div>
-            </a>
-            <a class="news-item" href="#news">
-              <div class="thumb thumb-3"></div>
-              <div class="news-copy">
-                <div><span class="badge notice">NOTICE</span><small>SEP 15, 2026</small></div>
-                <h3>Scheduled Maintenance</h3>
-                <p>Regular maintenance will be held on<br>Sep 16, 2026, 08:00 — 12:00 (UTC+1).</p>
-              </div>
-            </a>
-          </div>
-        </article>
-
-        <article class="panel info-panel" id="game-info">
-          <div class="panel-heading"><h2><span>▤</span> GAME INFO</h2></div>
-          <a class="feature-card" href="#game-guide">
-            <div class="feature-copy">EXPLORE<br>BATTLE<br>COLLECT<br>GROW</div>
-            <span>GAME GUIDE&nbsp; ›</span>
-          </a>
-          <div class="mini-cards">
-            <a href="#characters"><b>CHARACTERS</b></a>
-            <a href="#maps"><b>MAPS</b></a>
-            <a href="#items"><b>ITEMS</b></a>
-          </div>
-        </article>
-
-        <aside class="side-panel" id="download">
-          <a class="download-button" href="#download-client">
-            <span class="download-icon">⇩</span>
-            <strong>DOWNLOAD</strong>
-            <small>GAME CLIENT</small>
-            <b>›</b>
-          </a>
-
-          <div class="side-links">
-            <a href="#game-guide">
-              <span>▣</span><div><strong>GAME GUIDE</strong><small>Learn the basics and master BOTS</small></div><b>›</b>
-            </a>
-            <a href="#ranking" id="ranking">
-              <span>♛</span><div><strong>RANKING</strong><small>Check the top players</small></div><b>›</b>
-            </a>
-            <a href="#community" id="community">
-              <span>●</span><div><strong>COMMUNITY</strong><small>News, discussions and more</small></div><b>›</b>
-            </a>
-            <a href="#support" id="support">
-              <span>?</span><div><strong>SUPPORT</strong><small>Get help and contact us</small></div><b>›</b>
-            </a>
-          </div>
-        </aside>
+      <section id="game-info" class="hotspot game-info-area" aria-label="Game Information">
+        <a href="#game-guide" class="hotspot-link game-guide" aria-label="Game Guide"></a>
+        <a href="#characters" class="hotspot-link characters" aria-label="Characters"></a>
+        <a href="#maps" class="hotspot-link maps" aria-label="Maps"></a>
+        <a href="#items" class="hotspot-link items" aria-label="Items"></a>
       </section>
-    </main>
 
-    <footer>
-      <div class="footer-brand">BOTS<span>ONLINE</span></div>
-      <div>SMALL BOTS, BIG ADVENTURE</div>
-      <nav aria-label="Footer navigation">
-        <a href="#home">HOME</a><i>|</i><a href="#game-info">GAME INFO</a><i>|</i>
-        <a href="#download">DOWNLOAD</a><i>|</i><a href="#ranking">RANKING</a><i>|</i>
-        <a href="#community">COMMUNITY</a><i>|</i><a href="#support">SUPPORT</a>
-      </nav>
-      <div>A MORE COLORFUL WORLD<br>AWAITS</div>
-    </footer>
-  </div>
+      <aside id="download" class="hotspot side-area" aria-label="Download and site links">
+        <a href="#download-client" class="hotspot-link download-client" aria-label="Download Game Client"></a>
+        <a href="#game-guide" class="hotspot-link side-guide" aria-label="Game Guide"></a>
+        <a href="#ranking" class="hotspot-link side-ranking" aria-label="Ranking"></a>
+        <a href="#community" class="hotspot-link side-community" aria-label="Community"></a>
+        <a href="#support" class="hotspot-link side-support" aria-label="Support"></a>
+      </aside>
+
+      <footer class="hotspot footer-area" aria-label="Footer">
+        <a href="#home" class="hotspot-link footer-home" aria-label="Home"></a>
+        <a href="#game-info" class="hotspot-link footer-game-info" aria-label="Game Info"></a>
+        <a href="#download" class="hotspot-link footer-download" aria-label="Download"></a>
+        <a href="#ranking" class="hotspot-link footer-ranking" aria-label="Ranking"></a>
+        <a href="#community" class="hotspot-link footer-community" aria-label="Community"></a>
+        <a href="#support" class="hotspot-link footer-support" aria-label="Support"></a>
+      </footer>
+    </div>
+  </main>
   <script src="./js/main.js"></script>
 </body>
 </html>
