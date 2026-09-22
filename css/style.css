@@ -1,111 +1,127 @@
 :root{
-  --bg:#050f18;--panel:#081c2c;--panel2:#0b2539;--line:#285572;
-  --text:#edf5fa;--muted:#91a9ba;--orange:#ff7413;--orange2:#ffad3b;
-  --green:#00f39b;--cyan:#25d8ff;
-  --mockup:url("../ChatGPT%20Image%20Sep%2022,%202026%20at%2006_10_56%20PM.png");
+  --design-width:1672;
+  --design-height:941;
+  --cyan:#4bcfff;
+  --orange:#ff7b19;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:#02070c;color:var(--text);font-family:"Rajdhani",Arial,sans-serif}
-body:before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(circle at 50% 0,#16334a 0,#02070c 55%);opacity:.75}
-a{text-decoration:none;color:inherit}
-button{font:inherit}
-.site-shell{width:min(1664px,100%);margin:auto;background:var(--bg);box-shadow:0 0 90px #000;overflow:hidden}
-
-/* HEADER */
-.topbar{height:94px;display:grid;grid-template-columns:360px 1fr 92px;align-items:center;padding:0 25px;background:
-  linear-gradient(180deg,#142f45 0,#091a2a 65%,#06121d 100%);border-bottom:4px solid #1d425c;position:relative;z-index:20}
-.brand{width:325px;height:94px;display:flex;flex-direction:column;justify-content:center;align-items:center;
-  background:linear-gradient(155deg,#f7f9fa 0,#71818d 34%,#101a22 35%,#e8eef0 49%,#697984 68%,#101820 69%);
-  clip-path:polygon(0 13%,86% 13%,100% 50%,86% 87%,0 87%,7% 50%);color:#08131b;
-  text-shadow:0 2px #fff;filter:drop-shadow(0 7px 4px #0008)}
-.brand-bots{font:800 67px/.72 "Barlow Condensed";letter-spacing:-4px}
-.brand-online{font:700 15px/1 "Rajdhani";letter-spacing:7px;margin-top:10px}
-.main-nav{height:100%;display:flex;justify-content:center}
-.nav-item{min-width:120px;height:100%;display:grid;place-items:center;padding:0 18px;border-left:1px solid #17354b;
-  color:#d9e6ed;font:700 18px "Barlow Condensed";letter-spacing:1px;transition:.18s}
-.nav-item:hover,.nav-item.active{color:#111a20;background:linear-gradient(180deg,#ffad3b,#f06a12);
-  box-shadow:inset 0 0 0 2px #ffc46b,0 0 22px #ff751c44}
-.language{justify-self:end;border:0;background:none;color:#dbe8ef;cursor:pointer;display:flex;align-items:center;gap:8px;font-weight:600}
-.language .globe{font-size:23px}.language b{font-size:12px}
-.language-menu{position:absolute;right:18px;top:76px;width:160px;padding:8px;background:#071724;border:1px solid #35617b;box-shadow:0 10px 30px #000;z-index:30}
-.language-menu button{display:block;width:100%;padding:8px;border:0;background:none;color:#cfe0ea;text-align:left;cursor:pointer}
-.language-menu button:hover{background:#14364e;color:#fff}
-
-/* HERO */
-.hero{height:500px;position:relative;isolation:isolate;overflow:hidden;border-bottom:3px solid #244c67;background:#071724}
-.hero:before{content:"";position:absolute;inset:0;z-index:-2;background-image:var(--mockup);
-  background-size:100% auto;background-position:center -94px;background-repeat:no-repeat}
-.hero:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#07152218 0,#07152200 55%,#07152216)}
-.hero-copy{position:absolute;left:5%;top:92px;text-shadow:0 5px 14px #000;z-index:2}
-.eyebrow{font:italic 700 21px "Barlow Condensed";transform:rotate(-5deg);margin-left:20px}
-.hero-copy h1{font:800 82px/.78 "Barlow Condensed";font-style:italic;letter-spacing:-3px;margin:35px 0 0;
-  -webkit-text-stroke:2px #111;color:#f7f8f8}
-.hero-copy h1 em{display:block;color:var(--orange);font-style:italic;-webkit-text-stroke:2px #722708;margin-left:70px}
-.hero-copy p{font:italic 700 20px/1.1 "Barlow Condensed";margin:35px 0 0 35px}
-.hero-play,.download-button{background:linear-gradient(180deg,#ffb13c,#ff680b);border:3px solid #79370b;
-  box-shadow:0 0 0 2px #ffc76d,0 10px 25px #0008;color:#111b21;
-  clip-path:polygon(3% 0,94% 0,100% 50%,94% 100%,3% 100%,0 50%);transition:.18s}
-.hero-play:hover,.download-button:hover{filter:brightness(1.08);transform:translateY(-2px)}
-.hero-play{position:absolute;right:3%;top:0;width:355px;height:92px;display:flex;flex-direction:column;align-items:center;justify-content:center}
-.hero-play strong{font:800 38px/.9 "Barlow Condensed";letter-spacing:1px}
-.hero-play span{font:700 14px "Rajdhani";letter-spacing:2px}
-.hero-play b,.download-button>b{position:absolute;right:22px;font-size:38px}
-.hero-tagline{position:absolute;right:5%;top:145px;font:italic 700 29px/1.05 "Barlow Condensed";text-align:right;transform:rotate(-5deg);text-shadow:0 4px 8px #000}
-.server-card{position:absolute;right:4%;bottom:8px;width:385px;background:linear-gradient(180deg,#092238ef,#061522f5);
-  border:2px solid #1d5a7a;padding:10px 18px;box-shadow:0 0 0 3px #07111a,0 5px 15px #000}
-.server-title{display:flex;justify-content:space-between;border-bottom:1px solid #31536a;padding-bottom:6px;font:700 17px "Barlow Condensed"}
-.server-title strong{color:#7dffb9}.server-title i{display:inline-block;width:13px;height:13px;border-radius:50%;background:var(--green);box-shadow:0 0 10px var(--green)}
-.server-row{display:flex;justify-content:space-between;padding:3px 0;color:#bed0dc;font-size:13px}.server-row b{font-weight:500;color:#8fffc5}
-
-/* LOWER CONTENT */
-.content-grid{display:grid;grid-template-columns:1.12fr 1.1fr .78fr;gap:8px;padding:0 26px 14px;background:#071724}
-.panel,.side-panel{background:linear-gradient(180deg,#0b2335,#061522);border:2px solid #285572;box-shadow:inset 0 0 0 2px #07111a;min-height:330px}
-.panel-heading{height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 22px;border-bottom:2px solid #1e4b67}
-.panel-heading h2{font:700 23px "Barlow Condensed";letter-spacing:1px;margin:0}.panel-heading h2 span{font-size:21px}
-.panel-heading a{font-size:12px;color:#9eb4c3}
-.news-list{padding:5px 18px}.news-item{display:grid;grid-template-columns:170px 1fr;gap:14px;padding:10px 0;border-bottom:1px solid #21445a}
-.news-item:last-child{border:0}
-.thumb{height:82px;border:2px solid #547187;background-image:var(--mockup);background-size:850% auto;background-repeat:no-repeat}
-.thumb-1{background-position:5% 25%}.thumb-2{background-position:35% 45%}.thumb-3{background-position:65% 70%}
-.news-item small{color:#849aaa;margin-left:8px;font-size:11px}.badge{font-size:11px;font-weight:700;padding:2px 7px;color:white}
-.update{background:#1689d4}.event{background:#f06a2a}.notice{background:#63798a}
-.news-item h3{font:700 16px "Barlow Condensed";margin:3px 0}.news-item p{font-size:12px;color:#9bb0be;margin:0;line-height:1.1}
-.feature-card{display:block;height:170px;margin:8px 12px;background-image:var(--mockup);background-size:190% auto;background-position:center 54%;border:2px solid #466b83;position:relative}
-.feature-copy{position:absolute;left:20px;top:18px;font:italic 700 24px/1 "Barlow Condensed";text-shadow:2px 2px 5px #000}
-.feature-card>span{position:absolute;bottom:0;left:0;background:#08243ae8;padding:10px 22px;font:700 14px "Barlow Condensed"}
-.mini-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin:0 12px}
-.mini-cards a{height:80px;background-image:var(--mockup);background-size:400% auto;background-position:center 72%;border:2px solid #466b83;
-  display:flex;align-items:end;padding:8px;font:700 14px "Barlow Condensed";text-shadow:2px 2px 4px #000}
-.mini-cards a:nth-child(2){background-position:70% 80%}.mini-cards a:nth-child(3){background-position:100% 80%}
-.download-button{height:84px;margin:0 0 8px;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative}
-.download-button .download-icon{position:absolute;left:40px;font-size:42px}.download-button strong{font:800 38px/.85 "Barlow Condensed";letter-spacing:1px}
-.download-button small{font:700 11px "Rajdhani";letter-spacing:3px}
-.side-links a{display:grid;grid-template-columns:45px 1fr 20px;align-items:center;min-height:62px;padding:8px 15px;border-bottom:1px solid #23455a;transition:.15s}
-.side-links a:hover{background:#123149}.side-links> a>span{font-size:26px;text-align:center}.side-links strong{display:block;font:700 16px "Barlow Condensed";letter-spacing:.7px}
-.side-links small{display:block;color:#93aabd;font-size:11px}.side-links b{font-size:30px;color:#a9c7d9}
-
-/* FOOTER */
-footer{min-height:85px;background:#071522;border-top:3px solid #244b64;display:grid;grid-template-columns:180px 1fr 2fr 1fr;
-  align-items:center;padding:0 40px;gap:25px;color:#8ba2b2;font-size:12px}
-footer nav{display:flex;justify-content:center;gap:13px;font:500 12px "Rajdhani"}footer nav i{font-style:normal;color:#446174}
-.footer-brand{font:bold 27px "Barlow Condensed";color:#dbe5ea}.footer-brand span{display:block;font-size:8px;letter-spacing:4px;text-align:center}
-
-/* RESPONSIVE */
-@media(max-width:1100px){
-  .topbar{grid-template-columns:210px 1fr 70px;padding:0 12px}.brand{width:200px}.brand-bots{font-size:48px}
-  .nav-item{min-width:auto;padding:0 10px;font-size:15px}.hero{height:520px}
-  .content-grid{grid-template-columns:1fr 1fr;padding:0 12px 12px}.side-panel{grid-column:1/-1;display:grid;grid-template-columns:1fr 2fr}
-  .download-button{margin:0}.side-links{display:grid;grid-template-columns:repeat(4,1fr)}.side-links a{border-left:1px solid #23455a}
-  .server-card{right:2%;width:330px}
+body{
+  margin:0;
+  min-width:320px;
+  min-height:100vh;
+  background:
+    radial-gradient(circle at 50% 0,#173c57 0,#07121c 45%,#02070b 100%);
+  color:#fff;
+  font-family:Arial,sans-serif;
 }
-@media(max-width:760px){
-  .topbar{height:auto;min-height:75px;grid-template-columns:1fr auto;padding:8px 12px}.brand{height:58px;width:160px}.brand-bots{font-size:39px}.brand-online{font-size:10px}
-  .main-nav{grid-column:1/-1;order:3;overflow-x:auto;justify-content:flex-start}.nav-item{height:48px;padding:0 15px;white-space:nowrap}
-  .hero{height:540px}.hero-play{top:10px;right:2%;width:220px;height:65px}.hero-play strong{font-size:28px}.hero-play span{font-size:9px}
-  .hero-copy{left:4%;top:135px}.hero-copy h1{font-size:62px}.hero-tagline{top:250px;right:4%;font-size:21px}
-  .server-card{left:3%;right:3%;width:auto;bottom:8px}.content-grid{grid-template-columns:1fr}.side-panel{grid-column:auto;display:block}
-  .side-links{display:block}.side-links a{border-left:0}.news-item{grid-template-columns:105px 1fr}.thumb{height:72px}
-  footer{grid-template-columns:1fr;text-align:center;padding:18px;gap:10px}footer nav{flex-wrap:wrap}.footer-brand{margin:auto}
+.mockup-site{
+  width:100%;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  overflow-x:hidden;
 }
-@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+.design-stage{
+  position:relative;
+  width:min(100%,1672px);
+  aspect-ratio:1672 / 941;
+  flex:0 0 auto;
+  overflow:hidden;
+  box-shadow:0 0 70px #000;
+  background:#06131f;
+}
+.design-image{
+  position:absolute;
+  inset:0;
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:fill;
+  user-select:none;
+  -webkit-user-drag:none;
+  pointer-events:none;
+}
+.hotspot{
+  position:absolute;
+  z-index:2;
+  pointer-events:none;
+}
+.hotspot-link,
+.hotspot-link:visited{
+  position:absolute;
+  display:block;
+  pointer-events:auto;
+  color:transparent;
+  text-decoration:none;
+  outline:none;
+  border-radius:4px;
+  transition:background .14s ease,box-shadow .14s ease;
+}
+.hotspot-link:hover,
+.hotspot-link:focus-visible{
+  background:rgba(255,142,45,.08);
+  box-shadow:inset 0 0 0 1px rgba(255,188,100,.5),0 0 14px rgba(255,105,20,.2);
+}
+.hotspot-link:focus-visible{
+  outline:2px solid #fff;
+  outline-offset:1px;
+}
+
+/* Coordinates are based on the supplied 1672 × 941 reference. */
+.header-hotspot{left:0;top:0;width:100%;height:96px;pointer-events:none}
+.header-hotspot .hotspot-link{top:0;height:92px}
+.header-hotspot .home{left:407px;width:123px}
+.header-hotspot .game-info{left:530px;width:148px}
+.header-hotspot .download{left:678px;width:145px}
+.header-hotspot .ranking{left:823px;width:125px}
+.header-hotspot .community{left:948px;width:142px}
+.header-hotspot .support{left:1090px;width:143px}
+.header-hotspot .language{left:1465px;width:90px;height:42px;cursor:pointer;border:0;background:transparent}
+
+.play-now{left:1245px;top:51px;width:370px;height:100px}
+.hero-area{left:0;top:94px;width:100%;height:416px}
+.news-area{left:28px;top:508px;width:602px;height:344px}
+.view-news{left:496px;top:7px;width:110px;height:43px}
+.game-info-area{left:636px;top:508px;width:580px;height:344px}
+.game-guide{left:20px;top:189px;width:165px;height:48px}
+.characters{left:18px;top:239px;width:178px;height:84px}
+.maps{left:198px;top:239px;width:184px;height:84px}
+.items{left:384px;top:239px;width:180px;height:84px}
+
+.side-area{left:1219px;top:508px;width:430px;height:344px}
+.download-client{left:5px;top:15px;width:390px;height:91px}
+.side-guide{left:6px;top:112px;width:410px;height:57px}
+.side-ranking{left:6px;top:169px;width:410px;height:57px}
+.side-community{left:6px;top:226px;width:410px;height:57px}
+.side-support{left:6px;top:283px;width:410px;height:57px}
+
+.footer-area{left:0;top:852px;width:100%;height:89px}
+.footer-area .hotspot-link{top:21px;height:28px}
+.footer-home{left:550px;width:68px}
+.footer-game-info{left:622px;width:95px}
+.footer-download{left:721px;width:83px}
+.footer-ranking{left:809px;width:85px}
+.footer-community{left:899px;width:100px}
+.footer-support{left:1004px;width:82px}
+
+/* Keep the artwork proportional on every viewport. */
+@media(max-width:700px){
+  .design-stage{
+    width:100vw;
+    min-width:0;
+  }
+  .hotspot-link:hover{
+    background:transparent;
+    box-shadow:none;
+  }
+}
+
+/* A future real-content layer can be enabled without changing the mockup geometry. */
+.real-content{
+  position:absolute;
+  inset:0;
+  z-index:5;
+  pointer-events:none;
+}
