@@ -38,6 +38,34 @@ async function loadRanking(){
 function escapeHtml(v){return String(v).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
 loadRanking();
 
+async function loadNews(){
+ try{
+  const r=await fetch(API+"news.php?limit=10",{cache:"no-store"});const d=await r.json();
+  if(!d.ok||!d.rows?.length)return;
+  const cards=document.querySelectorAll("#page-community .news-cards article");
+  d.rows.slice(0,3).forEach((x,i)=>{if(!cards[i])return;cards[i].querySelector("span").textContent=(x.category||"NOTICE")+" · "+(x.published_at||"");cards[i].querySelector("h3").textContent=x.title;cards[i].querySelector("p").textContent=x.excerpt||"";});
+ }catch(_){}
+}
+loadNews();
+
+document.querySelectorAll("#page-ranking .tabs button").forEach((button,index)=>{
+ button.addEventListener("click",()=>{
+  document.querySelectorAll("#page-ranking .tabs button").forEach(b=>b.classList.remove("active"));button.classList.add("active");
+  // The API currently exposes the verified level/experience dataset; guild mode will use the same endpoint after its schema is confirmed.
+  loadRanking();
+ });
+});
+
+async function loadLauncher(){
+ try{
+  const r=await fetch(API+"launcher.php",{cache:"no-store"});const d=await r.json();
+  if(d.ok&&d.download_url){
+   document.querySelectorAll(".real-btn").forEach(a=>{if(a.textContent.includes("DOWNLOAD CLIENT")){a.href=d.download_url;a.target="_blank";a.onclick=null;}});
+  }
+ }catch(_){}
+}
+loadLauncher();
+
 const form=document.getElementById("support-form"),msg=document.getElementById("form-msg");
 form.addEventListener("submit",e=>{e.preventDefault();msg.textContent="Support request captured. Ticket/email backend can be connected when the support service is configured.";form.reset()});
 })();
