@@ -69,3 +69,19 @@ loadLauncher();
 const form=document.getElementById("support-form"),msg=document.getElementById("form-msg");
 form.addEventListener("submit",e=>{e.preventDefault();msg.textContent="Support request captured. Ticket/email backend can be connected when the support service is configured.";form.reset()});
 })();
+document.querySelectorAll("[data-info-tab]").forEach(card=>{
+ card.addEventListener("click",e=>{
+  e.preventDefault();
+  const target=card.dataset.infoTab;
+  document.querySelectorAll("[data-info-section]").forEach(s=>s.classList.toggle("active",s.dataset.infoSection===target));
+  const info=document.getElementById("page-game-info");
+  if(info) info.scrollIntoView({behavior:"smooth",block:"start"});
+ });
+});
+document.querySelectorAll("[data-external='discord']").forEach(a=>{
+ a.addEventListener("click",e=>{
+  const url=document.body.dataset.discordUrl;
+  if(!url){e.preventDefault();alert("Discord link will be configured when the official community URL is provided.");return;}
+  a.href=url;
+ });
+});
